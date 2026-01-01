@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Proposal - GigPilot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .split { display: flex; height: 100vh; }
+        .input-side { width: 40%; padding: 40px; border-right: 1px solid #ddd; overflow-y: auto; background: white; }
+        .preview-side { width: 60%; padding: 60px; background: #f3f4f6; overflow-y: auto; }
+        .paper { background: white; min-height: 800px; padding: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <div class="split">
+        <div class="input-side">
+            <a href="dashboard.html" style="font-size: 14px; color: gray;">&larr; Back</a>
+            <h2 style="margin: 20px 0;">Proposal Details</h2>
+            
+            <form onsubmit="generateProposal(event)">
+                <div class="input-group">
+                    <label>Client Name</label>
+                    <input type="text" id="client" placeholder="e.g. TechStart Inc">
+                </div>
+                <div class="input-group">
+                    <label>Project Type</label>
+                    <input type="text" id="project" placeholder="e.g. E-commerce Website">
+                </div>
+                <div class="input-group">
+                    <label>Budget (₹)</label>
+                    <input type="number" id="budget" placeholder="25000">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">✨ Generate with AI</button>
+            </form>
+        </div>
+
+        <div class="preview-side">
+            <div class="paper" id="paper-content">
+                <h2 style="color: #ccc; text-align: center; margin-top: 200px;">Preview will appear here...</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generateProposal(e) {
+            e.preventDefault();
+            const client = document.getElementById('client').value;
+            const project = document.getElementById('project').value;
+            const budget = document.getElementById('budget').value;
+
+            // Fake AI Logic
+            document.getElementById('paper-content').innerHTML = `
+                <h1>Project Proposal</h1>
+                <hr>
+                <p><strong>Client:</strong> ${client}</p>
+                <p><strong>Project:</strong> ${project}</p>
+                <h3>1. Overview</h3>
+                <p>We are excited to submit this proposal for ${project}. Our goal is to deliver high-quality results.</p>
+                <h3>2. Investment</h3>
+                <p><strong>Total: ₹${budget}</strong></p>
+                <p>Includes design, development, and support.</p>
+                <br>
+                <button class="btn btn-primary">Download PDF</button>
+            `;
+        }
+    </script>
+</body>
+</html>
