@@ -16,21 +16,24 @@
 
     <div class="split">
         <div class="input-side">
-            <a href="dashboard.html" style="font-size: 14px; color: gray;">&larr; Back</a>
-            <h2 style="margin: 20px 0;">Proposal Details</h2>
+            <a href="dashboard.html" style="font-size: 14px; color: gray; text-decoration: none; display: inline-block; margin-bottom: 20px;">
+                &larr; Back to Dashboard
+            </a>
+            
+            <h2 style="margin-bottom: 20px;">Proposal Details</h2>
             
             <form onsubmit="generateProposal(event)">
                 <div class="input-group">
                     <label>Client Name</label>
-                    <input type="text" id="client" placeholder="e.g. TechStart Inc">
+                    <input type="text" id="client" placeholder="e.g. TechStart Inc" required>
                 </div>
                 <div class="input-group">
                     <label>Project Type</label>
-                    <input type="text" id="project" placeholder="e.g. E-commerce Website">
+                    <input type="text" id="project" placeholder="e.g. E-commerce Website" required>
                 </div>
                 <div class="input-group">
                     <label>Budget (₹)</label>
-                    <input type="number" id="budget" placeholder="25000">
+                    <input type="number" id="budget" placeholder="25000" required>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">✨ Generate with AI</button>
             </form>
@@ -49,20 +52,39 @@
             const client = document.getElementById('client').value;
             const project = document.getElementById('project').value;
             const budget = document.getElementById('budget').value;
+            const date = new Date().toLocaleDateString();
 
-            // Fake AI Logic
+            // AI Simulation Logic
             document.getElementById('paper-content').innerHTML = `
-                <h1>Project Proposal</h1>
-                <hr>
-                <p><strong>Client:</strong> ${client}</p>
-                <p><strong>Project:</strong> ${project}</p>
-                <h3>1. Overview</h3>
-                <p>We are excited to submit this proposal for ${project}. Our goal is to deliver high-quality results.</p>
-                <h3>2. Investment</h3>
-                <p><strong>Total: ₹${budget}</strong></p>
-                <p>Includes design, development, and support.</p>
-                <br>
-                <button class="btn btn-primary">Download PDF</button>
+                <div style="font-family: 'Times New Roman', serif;">
+                    <h1 style="border-bottom: 2px solid #333; padding-bottom: 10px;">Project Proposal</h1>
+                    <p style="text-align: right; color: gray;">Date: ${date}</p>
+                    
+                    <p><strong>Prepared For:</strong> ${client}</p>
+                    <p><strong>Project:</strong> ${project}</p>
+                    
+                    <br>
+                    <h3>1. Executive Summary</h3>
+                    <p>We are pleased to submit this proposal for the development of <strong>${project}</strong>. 
+                    Our objective is to provide a high-quality solution that meets the specific needs of ${client}.</p>
+                    
+                    <h3>2. Scope of Work</h3>
+                    <ul>
+                        <li>Requirement Analysis & Planning</li>
+                        <li>Design & Development Phase</li>
+                        <li>Testing & Quality Assurance</li>
+                        <li>Final Deployment</li>
+                    </ul>
+
+                    <h3>3. Investment</h3>
+                    <div style="background: #f9f9f9; padding: 15px; border: 1px solid #ddd;">
+                        <p><strong>Total Project Cost: ₹${budget}</strong></p>
+                        <small>Payment Terms: 50% upfront, 50% on completion.</small>
+                    </div>
+
+                    <br><br>
+                    <button class="btn btn-primary" onclick="alert('PDF Downloaded!')">Download PDF</button>
+                </div>
             `;
         }
     </script>

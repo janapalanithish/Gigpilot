@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GigPilot - AI Sales OS</title>
+    <title>GigPilot - The AI Sales OS for Freelancers</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -13,41 +13,72 @@
         <a href="index.html" class="logo">GigPilot.</a>
         <ul class="nav-links">
             <li><a href="#how-it-works">How it Works</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#features">Features</a></li>
         </ul>
         <div class="nav-buttons">
-            <button class="btn btn-secondary" onclick="navigateTo('login.html')">Log In</button>
-            <button class="btn btn-primary" onclick="navigateTo('login.html')">Start for Free</button>
+            <button class="btn btn-secondary" onclick="window.location.href='login.html'">Log In</button>
+            <button class="btn btn-primary" onclick="window.location.href='login.html'">Start for Free</button>
         </div>
     </nav>
 
     <section class="hero">
         <div class="container">
-            <h1>Win Clients Without<br><span>Writing Proposals.</span></h1>
-            <p style="color: #6B7280; margin-bottom: 30px;">Generate professional Proposals, Contracts, and Invoices in 30 seconds.</p>
-            <button class="btn btn-primary" style="padding: 15px 30px; font-size: 16px;" onclick="navigateTo('login.html')">🚀 Create My First Proposal</button>
+            <h1>Stop Writing Proposals.<br><span>Start Closing Deals.</span></h1>
+            <p style="color: #6B7280; margin-bottom: 30px; font-size: 18px;">
+                Freelancers lose 20+ hours a month on paperwork. 
+                GigPilot generates winning Proposals, Contracts, and Invoices in seconds using AI.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 15px;">
+                <button class="btn btn-primary" style="padding: 15px 30px; font-size: 16px;" onclick="window.location.href='login.html'">🚀 Create Free Proposal</button>
+                <button class="btn btn-secondary" style="padding: 15px 30px; font-size: 16px;" onclick="alert('Demo video coming soon!')">▶ Watch Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section" style="background: #fff;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Why Freelancers Choose GigPilot</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>⚡ Speed</h3>
+                    <p>What used to take 2 hours now takes 2 minutes. Respond to leads before they go cold.</p>
+                </div>
+                <div class="card">
+                    <h3>🛡️ Protection</h3>
+                    <p>Never start work without a contract. Our AI generates legal terms automatically.</p>
+                </div>
+                <div class="card">
+                    <h3>💰 Perception</h3>
+                    <p>Look like a premium agency. Professional documents justify higher rates.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="how-it-works" class="section">
         <div class="container">
-            <h2 style="text-align: center;">Your New Workflow</h2>
+            <h2 style="text-align: center;">From "Lead" to "Paid" in 3 Steps</h2>
             <div class="grid-3">
                 <div class="card">
                     <h3>1. Input Details</h3>
-                    <p>Enter client name and budget. No writing needed.</p>
+                    <p>Simply type: "Website for dentist, $3000". That's it.</p>
                 </div>
                 <div class="card">
                     <h3>2. AI Generation</h3>
-                    <p>GigPilot structures a perfect persuasive document.</p>
+                    <p>We write the scope, timeline, and terms instantly.</p>
                 </div>
                 <div class="card">
-                    <h3>3. Get Paid</h3>
-                    <p>Send the link. Track views. Close the deal.</p>
+                    <h3>3. Win the Client</h3>
+                    <p>Send a beautiful link. Get it signed. Get paid.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer style="background: #111827; color: white; padding: 40px; text-align: center; margin-top: 40px;">
+        <h3>GigPilot.</h3>
+        <p style="color: #9CA3AF; margin-top: 10px;">Built for the Future of Freelancing.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

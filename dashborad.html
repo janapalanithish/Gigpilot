@@ -11,18 +11,19 @@
     <div class="dashboard-layout">
         <aside class="sidebar">
             <div class="logo" style="margin-bottom: 40px;">GigPilot.</div>
-            <ul style="gap: 10px; display: flex; flex-direction: column;">
+            <ul style="gap: 15px; display: flex; flex-direction: column;">
                 <li><a href="#" style="font-weight: bold; color: var(--primary);">📊 Dashboard</a></li>
                 <li><a href="generator.html">📝 New Proposal</a></li>
                 <li><a href="#">📂 My Projects</a></li>
-                <li><a href="index.html" style="color: red; margin-top: 20px;">🚪 Logout</a></li>
+                <li><a href="#">⚙️ Settings</a></li>
+                <li style="margin-top: 40px;"><a href="index.html" style="color: red;">🚪 Logout</a></li>
             </ul>
         </aside>
 
         <main class="main-content">
             <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
                 <h2>Overview</h2>
-                <button class="btn btn-primary" onclick="navigateTo('generator.html')">+ Create New</button>
+                <button class="btn btn-primary" onclick="window.location.href='generator.html'">+ Create New</button>
             </header>
 
             <div class="grid-3" style="margin-top: 0;">
@@ -40,14 +41,13 @@
                 </div>
             </div>
 
-            <h3 style="margin-top: 40px;">Recent Activity</h3>
-            <div class="card" style="margin-top: 20px; text-align: center; color: gray;">
-                <p>No proposals generated yet.</p>
-                <button class="btn btn-secondary" style="margin-top: 10px;" onclick="navigateTo('generator.html')">Start Now</button>
+            <div style="margin-top: 60px; text-align: center; padding: 60px; border: 2px dashed #E5E7EB; border-radius: 12px;">
+                <h3 style="color: #9CA3AF;">No proposals yet</h3>
+                <p style="color: #9CA3AF; margin-bottom: 20px;">Create your first document to start closing deals.</p>
+                <button class="btn btn-primary" onclick="window.location.href='generator.html'">Start Now</button>
             </div>
         </main>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
